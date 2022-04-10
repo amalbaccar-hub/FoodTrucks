@@ -1,0 +1,23 @@
+connector:
+  name: GithubConnector
+  identifier: GithubConnector
+  description:
+  orgIdentifier: default
+  projectIdentifier: FoodTrucksLab
+  type: Github
+  spec:
+    url: https://github.com/amalbaccar-hub
+    validationRepo: FoodTrucks
+    authentication:
+      type: Http
+      spec:
+        type: UsernameToken
+        spec:
+          username: amalbaccar-hub
+          tokenRef: githubsec
+    apiAccess:
+      type: Token
+      spec:
+        tokenRef: githubsec
+    executeOnDelegate: false
+    type: Account
